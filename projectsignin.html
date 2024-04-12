@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="projectsignin.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .warning-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="headii">LOGIN/SIGNUP PAGE!!</h1>
+    <div class="login-container">
+        <div class="options">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+        <div class="forms">
+            <div class="login-box" id="login-box">
+                <h2>Login Here</h2>
+                <form id="login-form" action="#" method="post">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter Username">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password">
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <div class="warning-message hidden" id="login-warning">Please fill in all fields.</div>
+                <div class="success-message hidden" id="login-success">Hurray! Login successful!</div>
+            </div>
+            <div class="signup-box hidden" id="signup-box">
+                <h2>Sign Up Here</h2>
+                <form id="signup-form" action="#" method="post">
+                    <div class="input-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter full name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="signup-username" placeholder="Enter Username">
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="signup-password" placeholder="Enter Password">
+                    </div>
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                </form>
+                <div class="warning-message hidden" id="signup-warning">Please fill in all fields.</div>
+                <div class="success-message hidden" id="signup-success">Hurray! Sign up successful!</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        const signupBtn = document.getElementById('signup-btn');
+        const loginBox = document.getElementById('login-box');
+        const signupBox = document.getElementById('signup-box');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const loginWarning = document.getElementById('login-warning');
+        const loginSuccess = document.getElementById('login-success');
+        const signupWarning = document.getElementById('signup-warning');
+        const signupSuccess = document.getElementById('signup-success');
+
+        loginBtn.addEventListener('click', () => {
+            loginBox.classList.remove('hidden');
+            signupBox.classList.add('hidden');
+        });
+
+        signupBtn.addEventListener('click', () => {
+            signupBox.classList.remove('hidden');
+            loginBox.classList.add('hidden');
+        });
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (loginForm.username.value.trim() === '' || loginForm.password.value.trim() === '') {
+                loginWarning.classList.remove('hidden');
+                loginSuccess.classList.add('hidden');
+            } else {
+                loginWarning.classList.add('hidden');
+                loginSuccess.classList.remove('hidden');
+                loginForm.reset();
+            }
+        });
+
+        signupForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (signupForm.fullname.value.trim() === '' || signupForm.email.value.trim() === '' || signupForm.signup-username.value.trim() === '' || signupForm.signup-password.value.trim() === '') {
+                signupWarning.classList.remove('hidden');
+                signupSuccess.classList.add('hidden');
+            } else {
+                signupWarning.classList.add('hidden');
+                signupSuccess.classList.remove('hidden');
+                signupForm.reset();
+            }
+        });
+    </script>
+</body>
+</html>

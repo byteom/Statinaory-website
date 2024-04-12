@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="projectsignin.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="headii">LOGIN/SIGNUP PAGE!!</h1>
+    <div class="login-container">
+        <div class="options">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+        <div class="forms">
+            <div class="login-box" id="login-box">
+                <h2>Login Here</h2>
+                <form id="login-form" action="#" method="post">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter Username">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password">
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <div class="success-message hidden" id="login-success">Login successful!</div>
+            </div>
+            <!-- Signup box and form here -->
+        </div>
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById('login-btn');
+        const loginForm = document.getElementById('login-form');
+        const loginSuccessMsg = document.getElementById('login-success');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Here you can perform your login logic, like sending a request to the server
+
+            // For this example, let's just show the success message
+            loginSuccessMsg.classList.remove('hidden');
+
+            // You can also reset the form fields if needed
+            loginForm.reset();
+        });
+
+        // Code for switching between login and signup forms...
+    </script>
+</body>
+</html>
