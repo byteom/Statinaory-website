@@ -523,6 +523,37 @@ input{
 }
 
 .banner_1 img {
-    width: 100%;
-    height: auto;
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    object-position:center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+
+.shop-item-div:hover {
+    background-color: #f0f0f0; /* Change to the desired background color */
+    cursor: pointer; /* Change cursor to pointer for better user interaction */
+    transform: scale(1.05); /* Change the scale when the user hovers over the item */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+
+.heading_11 {
+    background-color: skyblue; /* Background color */
+
+    
+}
+
+.heading_11:hover {
+    background-color: papayawhip; /* Change background color on hover */
+    color: palevioletred; /* Change text color on hover */
+    
 }
