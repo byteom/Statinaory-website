@@ -1,5 +1,7 @@
 
-
+body{
+    background-image: linear-gradient(to right, pink, skyblue );
+}
 
 *{
     color:black;
@@ -24,10 +26,10 @@
 
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     min-height: 8vh;
-    background-color: grey;
+    background-color: skyblue;
     font-family: 'Poppins', sans-serif;
     
 }
@@ -41,11 +43,11 @@ width: 30%;
 }
 .nav-links a{
    
-    color: white;
+    color: black;
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 20px;
-    text-decoration: none;
+    text-decoration: underline;
     margin-left: 50px;
     text-transform: uppercase;
     transition: all 0.2s ease-in;
@@ -510,3 +512,17 @@ input{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 } */
+
+
+
+/* Center the element horizontally and vertically *//* Style the banner */
+.banner_1 {
+    position: relative;
+    margin: 50px auto;
+    width: 80%; /* Adjust width as needed */
+}
+
+.banner_1 img {
+    width: 100%;
+    height: auto;
+}

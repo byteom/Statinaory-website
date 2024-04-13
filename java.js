@@ -179,12 +179,3 @@ function updatecarttotal(){
 
 
 
-
-
-
-
- 
-
-
-
- 
